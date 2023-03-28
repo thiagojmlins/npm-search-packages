@@ -1,10 +1,16 @@
+import { Provider } from 'react-redux';
+import RepositoriesList from './components/RepositoriesList';
+import { store } from './state';
+
 import './App.css';
 
 function App() {
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>Hello World!</h1>
-    </div>
+    <Provider store={store}>
+      <div>
+        <RepositoriesList />
+      </div>
+    </Provider>
   );
 }
 
